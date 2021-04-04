@@ -532,7 +532,7 @@ nusc.render_annotation(my_annotation_token)
 ```
 
 
-<img src="https://github.com/kimhongsuk/Autonomous-car-recognition-investigation/blob/main/img/NUSCENES/sample_annotiation.png" width="500">
+<img src="https://github.com/kimhongsuk/Autonomous-car-recognition-investigation/blob/main/img/NUSCENES/sample_annotation.png" width="500">
 
  그리고 추출된 데이터를 렌더링하면 아까 전의 사진과 다르게, 직육면체가 하나만 보이게 됩니다.
 
