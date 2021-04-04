@@ -132,9 +132,15 @@
 
 ## 데이터 예시
 
+![Image 00](https://github.com/kimhongsuk/Autonomous-car-recognition-investigation/blob/main/img/KITTI/Image_00.png)
 
+![Image 01](https://github.com/kimhongsuk/Autonomous-car-recognition-investigation/blob/main/img/KITTI/Image_01.png)
 
- Image\_00과 Image\_01은 흑백 카메라로 촬영한 사진이고, Image\_02와 Image\_03은 컬러 카메라로 촬영한 사진입니다. 각각의 차이점은 차량 중앙에 위치한 카메라인가, 측면에 위치한 카메라인가 입니다.
+![Image 02](https://github.com/kimhongsuk/Autonomous-car-recognition-investigation/blob/main/img/KITTI/Image_02.png)
+
+![Image 03](https://github.com/kimhongsuk/Autonomous-car-recognition-investigation/blob/main/img/KITTI/Image_03.png)
+
+ 첫번째 사진과 두번째 사진은 흑백 카메라로 촬영한 사진이고, 세번째 사진과 네번째 사진은은 컬러 카메라로 촬영한 사진입니다. 그리고 같은 특성을 가진 사진들의 차이점은 차량 중앙에 위치한 카메라인가, 측면에 위치한 카메라인가 입니다.
 
  이 외 calibration이나 주석파일들은 상단에 설명한 자료들이 있으므로 생략합니다.
 
