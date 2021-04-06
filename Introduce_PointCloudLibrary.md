@@ -10,6 +10,7 @@ Point Cloud는 깊이(z)를 가지고 있기 때문에 N x 3 Numpy 배열로 표
 
  Point Cloud Library는 Point Cloud의 파일 저장, 읽기, noise 제거, 군집화, 분류 등 여러 기능을 수행하는 알고리즘들을 제공합니다. 특히 다른 3D 오픈소스들과 차별점으로, 코드가 상속으로 구성되어 있어 알고리즘을 쉽게 수정한 후 적용할 수 있다는 점이 있습니다.
 
+
 ## 모듈
 
 -   pcl\_filters : Point Cloud data에서 Error 값과 노이즈 제거 등의 필터들을 제공합니다.
@@ -29,6 +30,7 @@ Point Cloud는 깊이(z)를 가지고 있기 때문에 N x 3 Numpy 배열로 표
 -   pcl\_outofcore: 용량이 커서 메인 메모리에 저장할 수 없는 Point Cloud를 위해 8진수 자료 구조를 제공합니다.
 -   pcl\_recognition: 개체 인식 응용 프로그램에 사용되는 알고리즘을 포함합니다.
 -   pcl\_search: 인접한 값을 검색하는 자료 구조들을 제공합니다. (kdtree, octrees, brute forcd 등)
+
 
 ## 기본적인 사용법
 
@@ -388,6 +390,7 @@ sensor_msgs::PointCloud2 laser2cloudmsg(sensor_msgs::LaserScan laser)
 
  2D LiDAR는 Ros에서 sensor\_msgs::PointCloud2가 아닌 sensor\_msgs::LaserScan으로 통신하기 때문에 다른 방식으로 형 변환을 해줍니다. 다른 여러가지 방법이 많지만, 편의상 sensor\_msgs::PointCloud2로 변환하고 난 뒤 pcl::PointCloud로 변환해도 됩니다.
 
+
 ## 모듈 사용 예시
 
  Point Cloud Library의 모듈은 상당히 많고 그 안에 제공되는 알고리즘들과 자료 구조들은 상당히 많습니다. 그래서 그 중에 Voxelization하는 방법으로 모듈 사용법을 간략히 소개하고자 합니다.
@@ -429,6 +432,7 @@ void voxelize(pcl::PointCloud<pcl::PointXYZ>::Ptr pc_src, pcl::PointCloud<pcl::P
 pcl/filters/voxel\_grid.h를 import합니다. 그리고 Voxelization에 필요한 요소들 (원본 Point Cloud, voxel leaf 크기)를 지정하고, filtering하면 됩니다.
 
  결과적으로, 모듈의 method들을 활용하여 간편하게 사용할 수 있습니다.
+
 
 ## 출처
 
