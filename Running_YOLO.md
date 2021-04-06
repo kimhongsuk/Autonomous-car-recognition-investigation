@@ -349,7 +349,7 @@ wget https://pjreddie.com/media/files/yolov3.weights
 
  준비 사항들을 끝마쳤다면, Object Detection을 실행합니다. 메시지가 올라가고 난 후, darknet 폴더 안에 predictions.jpg란 이름으로 결과물이 나옵니다.
 
-<img src="https://github.com/kimhongsuk/Autonomous-car-recognition-investigation/blob/main/img/YOLO/Result.png", width="650">
+<img src="https://github.com/kimhongsuk/Autonomous-car-recognition-investigation/blob/main/img/YOLO/Result.png" width="650">
 
 
 ## 출처
