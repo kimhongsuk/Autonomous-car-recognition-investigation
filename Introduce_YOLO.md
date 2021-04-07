@@ -18,6 +18,8 @@
 
  YOLO v2는 v1의 20개 이미지 분류 모델을 9000개 이미지 분류 모델로 발전시켰습니다. 또한 Normalization, Direct Location Prediction, Multi-Scale Training 기법을 도입하여 FPS와 mAP(정확도)를 높였습니다. 그리고 YOLO v3는 v2에 ResNet의 Residual Block을 차용해 darknet-19에서 darknet-53으로 변경해 106개의 신경망 층을 구성하였습니다. YOLO v4는 YOLO v3에서 백본망은 CSP-ResNet, CSP-Darknet, EfficientNet을 적용해 보고 다른 요소들에도 최신 기술들을 적용해본 뒤 가장 결과값이 좋은 것들을 모아둔 소스입니다. 마지막으로 v5는 v4와 비슷한 전략을 취하였습니다. 유의할 점은 v4는 2020년 4월에 발표되었고 v5는 2020년 6월에 발표되었기 때문에 둘 다 v3에서 파생되었다는 점입니다.
 
+ YOLO는 SSD와 함께 자율주행 차량의 실시간 객체인식에 활용됩니다. 이전의 RCNN과 같은 Objec Detection 딥러닝 모델들은 정확도는 높았으나 속도가 빠른 자동차에 적용하기에 매우 느려 부적합했습니다. 그러나 YOLO 같이 인식 속도를 빠르게 만든 딥러닝 모델이 자율주행자동차의 안전운전을 위한 빠른 판단에 적합합니다. 물론, 자율주행 자동차를 개발하는 회사에서는 코드를 그대로 쓰지 않을 것입니다. 하지만 인식 속도를 빠르게 만들어주는 컨셉을 제공하였고, 기존 weight 파일이 있다는 점에서 Object Detection이 필요한 소규모 기업에서 YOLO를 통해 다양한 제품을 만들 수 있습니다.
+
 
 ## YOLO 네트워크 디자인
 
