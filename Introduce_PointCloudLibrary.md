@@ -9,10 +9,11 @@
 Point Cloud는 깊이(z)를 가지고 있기 때문에 N x 3 Numpy 배열로 표현 됩니다. 하지만 센서에서 제공되는 추가 정보가 있을 경우 N x 4 Numpy 배열로 표현 됩니다. 예를 들어 Lidar 센서 데이터에는 반사도가 추가될 수 있으며, RGB-D 센서 데이터에는 색 정보가 추가 될 수 있습니다.
 
  Point Cloud Library는 Point Cloud의 파일 저장, 읽기, noise 제거, 군집화, 분류 등 여러 기능을 수행하는 알고리즘들을 제공합니다. 특히 다른 3D 오픈소스들과 차별점으로, 코드가 상속으로 구성되어 있어 알고리즘을 쉽게 수정한 후 적용할 수 있다는 점이 있습니다.
+ 
+ Point Cloud Library는 LiDAR를 이용한 자율주행에 제일 중요한 Library입니다. 노이즈 제거 및 군집화를 통해 정제된 데이터는 Object Detection에 활용이 되며, 카메라와 LiDAR가 sensor fusion을 하는 경우 기본 골자가 됩니다. 만약 차량 제어를 하게될 때 Point Cloud의 local과의 거리를 측정하여 사고가 나지 않도록 해줍니다.
 
 
 ## 모듈
-
 -   pcl\_filters : Point Cloud data에서 Error 값과 노이즈 제거 등의 필터들을 제공합니다.
 -   pcl\_features : Point Cloud data로부터 3D 특징 추정 (feature estimation) 을 위한 수많은 자료 구조와 방법들을 제공합니다.
 -   pcl\_keypoints : Keypoint를 검출하는 알고리즘을 제공합니다. (BRISK, Harris Corner, NARF, SIFT, SUSAN 등)
@@ -374,7 +375,7 @@ sensor_msgs::PointCloud2 cloud2cloudmsg(pcl::PointCloud<pcl::PointXYZ> cloud_src
  상단의 코드는 pcl::PointCloud를 sensor\_msgs::PointCloud2로 변환하는 방법입니다. Ros메시지로 보낸다는 toROSMsg를 사용하면 PointXYZ 형에서 PointCloud2 형으로 값이 형 변환 되어 입력됩니다.
 
 ```
-#include "laser_geometry/laser_geometry.h"
+#include <laser_geometry/laser_geometry.h>
 
 sensor_msgs::PointCloud2 laser2cloudmsg(sensor_msgs::LaserScan laser)
     {
